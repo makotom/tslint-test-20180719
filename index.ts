@@ -1,11 +1,9 @@
 /**
- * I THINK THIS IS A B.U.G.
- * This code showcases that very-long functions may be accepted by max-func-body-length rule
- * if the function is defined as a parameter of a pre-defined function/method, of which name matches /^describe/.
+ * Run npm i && npm run lint
  */
 {
     const describe: (fn: () => void) => void = (): void => null;
-    const describez: (fn: () => void) => void = describe;
+    const xyzdescribexyz: (fn: () => void) => void = describe;
     const describ: (fn: () => void) => void = describe;
     const x: { describe(fn: () => void): void } = { describe: describe };
 
@@ -114,7 +112,7 @@
     });
 
     // OK
-    describez(() => {
+    xyzdescribexyz(() => {
         process.stdout.write('');
         process.stdout.write('');
         process.stdout.write('');
